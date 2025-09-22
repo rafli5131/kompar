@@ -13,7 +13,7 @@ def fetch_weather(kecamatan, result_dict):
         # Get Data Cuaca
         response = requests.get("http://api.weatherapi.com/v1/current.json", params=params, timeout=10)
         
-        # Parse JSON response
+        # Parse JSON response to object
         data = json.loads(response.text)
 
         # Simpan hasil ke dictionary

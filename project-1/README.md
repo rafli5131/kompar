@@ -14,6 +14,11 @@ Kondisi cuaca yang perlu didapatkan adalah
 
 Masukan dari program berupa daftar kecamatan dalam file excel. output dari program adalah data nomor 1 sampa dengan nomer 7 yang diletakkan dalam kolom setelah nama kecamatan di file excel yang sama.
 
+### Anggota Kelompok
+- Rafliansyah Rizqi Pratama Bukhori | 235150300111024
+- Jonathan Arya Priguna | 235150301111015
+- Ahmad Husein Rafi | 235150301111016
+
 ### Kebutuhan
 - Python 3
 - Paket `requests`
