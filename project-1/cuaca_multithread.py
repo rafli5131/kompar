@@ -6,7 +6,8 @@ from openpyxl import load_workbook
 def fetch_weather(kecamatan, result_dict):
     params = {
         "key": "4c0dbb9c648a4e669a641524251809",
-        "q": kecamatan + ", Central Java, Indonesia"
+        "q": kecamatan + ", Daerah Istimewa Yogyakarta, Indonesia",
+        "lang" : "jv"
     }
     try:
         # Get Data Cuaca
@@ -34,7 +35,7 @@ def fetch_weather(kecamatan, result_dict):
 
 def main():
     # Load kecamatan from Excel
-    wb = load_workbook('kecamatan_jateng.xlsx')
+    wb = load_workbook('DIY.xlsx')
     ws = wb.active
 
     # Ambil daftar kecamatan dan simpan ke list
@@ -73,7 +74,7 @@ def main():
 
     # Simpan ke excel
     
-    wb.save('cuaca_hasil.xlsx')
+    wb.save('DIY.xlsx')
 
 if __name__ == "__main__":
     main()

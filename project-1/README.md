@@ -1,34 +1,36 @@
-## Project: Ambil Data Cuaca Kecamatan di Jawa Tengah (Multithread)
+## Project: Ambil Data Cuaca Kecamatan di DIY (Multithread)
 
-Script ini digunakan untuk mengambil data cuaca terkini dari API weatherapi.com untuk setiap kecamatan di Jawa Tengah yang terdapat pada file Excel, lalu menyimpan hasilnya ke file Excel baru. Proses pengambilan data dilakukan secara multithread agar lebih cepat.
+Buatlah sebuah program menggunakan multithraeding class untuk mendapatkan kondisi cuaca dari semua kecamatan di sebuah provinsi di indonesia. Setiap kelompok harus memilih provinsi yang berbeda-beda.
+
+Kondisi cuaca yang perlu didapatkan adalah
+
+    -Last Update (time)
+    -Suhu dalam derajat celcius
+    -Kelembapan
+    -Kondisi cuaca (cerah, berawan, hujan, dll)
+    -Kecepatan angin
+    -Arah Angin
+    -Sinar UV
+
+Masukan dari program berupa daftar kecamatan dalam file excel. output dari program adalah data nomor 1 sampa dengan nomer 7 yang diletakkan dalam kolom setelah nama kecamatan di file excel yang sama.
 
 ### Kebutuhan
-- Python 3.x
+- Python 3
 - Paket `requests`
 - Paket `openpyxl`
 
 ### Instalasi Dependensi
-Jalankan perintah berikut di terminal (direktori project):
 
 ```bash
 pip install requests openpyxl
 ```
 
 ### Cara Menjalankan
-1. Pastikan file `kecamatan_jateng.xlsx` sudah ada di folder ini dan berisi daftar kecamatan pada kolom pertama (A), mulai dari baris ke-2 (baris pertama untuk header).
+1. Pastikan file `Daftar_Kecamatan_DIY.xlsx` sudah ada di folder ini dan berisi daftar kecamatan pada kolom pertama (A), mulai dari baris ke-2 (baris pertama untuk header).
 2. Jalankan script dengan perintah:
 
 ```bash
 python cuaca_multithread.py
 ```
 
-3. Hasil akan disimpan pada file `cuaca_hasil.xlsx` di folder yang sama.
-
-### Penjelasan File
-- `cuaca_multithread.py` : Script utama untuk mengambil data cuaca.
-- `kecamatan_jateng.xlsx` : Daftar kecamatan (input).
-- `cuaca_hasil.xlsx` : Hasil data cuaca (output).
-
-### Catatan
-- Script ini menggunakan API key gratis dari weatherapi.com. Jika limit tercapai, Anda bisa mengganti API key pada script.
-- Jika ada kecamatan yang gagal diambil datanya, akan tertulis "ERROR" pada hasil.
+3. Hasil akan disimpan pada file yang sama.
