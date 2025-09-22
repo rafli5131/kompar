@@ -26,7 +26,7 @@ pip install requests openpyxl
 ```
 
 ### Cara Menjalankan
-1. Pastikan file `Daftar_Kecamatan_DIY.xlsx` sudah ada di folder ini dan berisi daftar kecamatan pada kolom pertama (A), mulai dari baris ke-2 (baris pertama untuk header).
+1. Pastikan file `DIY.xlsx` sudah ada di folder ini dan berisi daftar kecamatan pada kolom pertama (A), mulai dari baris ke-2 (baris pertama untuk header).
 2. Jalankan script dengan perintah:
 
 ```bash
