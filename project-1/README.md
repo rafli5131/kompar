@@ -1,6 +1,6 @@
 ## Project: Ambil Data Cuaca Kecamatan di DIY (Multithread)
 
-Buatlah sebuah program menggunakan multithraeding class untuk mendapatkan kondisi cuaca dari semua kecamatan di sebuah provinsi di indonesia. Setiap kelompok harus memilih provinsi yang berbeda-beda.
+Buatlah sebuah program menggunakan multithreading class untuk mendapatkan kondisi cuaca dari semua kecamatan di sebuah provinsi di indonesia. Setiap kelompok harus memilih provinsi yang berbeda-beda.
 
 Kondisi cuaca yang perlu didapatkan adalah
 
@@ -15,9 +15,9 @@ Kondisi cuaca yang perlu didapatkan adalah
 Masukan dari program berupa daftar kecamatan dalam file excel. output dari program adalah data nomor 1 sampa dengan nomer 7 yang diletakkan dalam kolom setelah nama kecamatan di file excel yang sama.
 
 ### Anggota Kelompok
-- Rafliansyah Rizqi Pratama Bukhori | 235150300111024
-- Jonathan Arya Priguna | 235150301111015
-- Ahmad Husein Rafi | 235150301111016
+- Rafliansyah Rizqi Pratama Bukhori
+- Jonathan Arya Priguna
+- Ahmad Husein Rafi
 
 ### Kebutuhan
 - Python 3
@@ -39,3 +39,7 @@ python cuaca_multithread.py
 ```
 
 3. Hasil akan disimpan pada file yang sama.
+
+### Pengamanan kredensial
+
+Sebelum menjalankan, atur `WEATHER_API_KEY` sebagai environment variable pada sistem lokal. Kunci API tidak boleh disimpan di source code atau diunggah ke GitHub. Kunci yang pernah dipublikasikan harus dirotasi oleh pemiliknya.
