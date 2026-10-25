@@ -1,17 +1,18 @@
 import requests
 import threading
 import json
+import os
 from openpyxl import load_workbook
 
 def fetch_weather(kecamatan, result_dict):
     params = {
-        "key": "4c0dbb9c648a4e669a641524251809",
+        "key": os.environ["WEATHER_API_KEY"],
         "q": kecamatan + ", Daerah Istimewa Yogyakarta, Indonesia",
         "lang" : "jv"
     }
     try:
         # Get Data Cuaca
-        response = requests.get("http://api.weatherapi.com/v1/current.json", params=params, timeout=10)
+        response = requests.get("https://api.weatherapi.com/v1/current.json", params=params, timeout=10)
         
         # Parse JSON response to object
         data = json.loads(response.text)
@@ -34,6 +35,8 @@ def fetch_weather(kecamatan, result_dict):
         result_dict[kecamatan] = ["ERROR"]*7
 
 def main():
+    if not os.getenv("WEATHER_API_KEY"):
+        raise SystemExit("Set WEATHER_API_KEY in your environment before running.")
     # Load kecamatan from Excel
     wb = load_workbook('DIY.xlsx')
     ws = wb.active
